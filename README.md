@@ -27,20 +27,27 @@ My Python Project
 Add the following to ~/.pypirc
 
 	[distutils]
-	index-servers = 
-		pypi 
-		pypitest
+	index-servers =
+			pypi
+			testpypi
 	
 	[pypi]
-	repository=https://pypi.python.org/pypi
-	username=acoomans
+	repository: https://upload.pypi.org/legacy/
+	username = acoomans
 	
-	[pypitest]
-	repository=https://testpypi.python.org/pypi
-	username=acoomans
+	[testpypi]
+	repository: https://test.pypi.org/legacy/
+	username = acoomans
 	
 ### Upload
 
 	python3 setup.py sdist upload
-
+	
 Note: uploading with python2 seems to be broken
+
+### Test PyPi
+	
+	python3 setup.py sdist upload --repository testpypi
+	pip install acoomans_python_project_template --extra-index-url https://testpypi.python.org/pypi
+
+
