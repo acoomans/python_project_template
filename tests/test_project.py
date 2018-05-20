@@ -1,9 +1,10 @@
 import unittest
+from project import MyClass
 
 class TestProject(unittest.TestCase):
 
     def setUp(self):
-        self.message = "hello"
+        self.myclass = MyClass()
 
     def testMessage(self):
-        self.assertEqual(self.message, 'hello')
+        self.assertEqual(self.myclass.message, 'hello')
