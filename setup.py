@@ -11,7 +11,7 @@ with open(path.join(here, 'requirements.txt')) as f:
 
 setup(
 	name='acoomans_python_project_template',
-	version=0.1,
+	version=0.2,
 	author='Arnaud Coomans',
 	author_email='arnaud.coomans@gmail.com',
 	description='A description for my python project',
