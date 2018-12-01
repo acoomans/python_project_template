@@ -8,9 +8,12 @@ parent_dir = os.path.split(os.path.dirname(__file__))[-1]
 if dir == 'scripts':
     sys.path.append(os.path.join(parent_dir, '..'))
 
+from project import MyClass
+
 
 def main():
-    print("hello")
+    c = MyClass()
+    print(c.message)
 
 
 if __name__ == "__main__":

@@ -8,4 +8,4 @@ class TestProject(unittest.TestCase):
         self.myclass = MyClass()
 
     def testMessage(self):
-        self.assertEqual(self.myclass.message, 'hello')
+        self.assertTrue('hello' in self.myclass.message)
