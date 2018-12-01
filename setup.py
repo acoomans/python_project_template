@@ -18,14 +18,10 @@ setup(
 	long_description=long_description,
 	url='https://github.com/acoomans/python_project_template',
 	license='BSD',
-    platforms='any',
-	keywords=[
-		'a',
-		'b',
-		'c'
-	],
+	platforms='any',
+	keywords=[],
 	install_requires=requirements,
 	scripts=['scripts/myscript.py'],
 	packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-    test_suite='tests.test_project',
+	test_suite='tests.test_project',
 )
