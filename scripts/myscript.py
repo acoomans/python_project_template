@@ -4,9 +4,9 @@ import os
 import sys
 
 
-parent_dir = os.path.split(os.path.dirname(__file__))[-1]
-if dir == 'scripts':
-    sys.path.append(os.path.join(parent_dir, '..'))
+parent_dir_components = os.path.split(os.path.dirname(os.path.realpath(__file__)))
+if parent_dir_components[-1] == 'scripts':
+    sys.path.append(parent_dir_components[0])
 
 from project import MyClass
 
